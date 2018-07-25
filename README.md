@@ -32,6 +32,6 @@ If you find the code and dataset useful in your research, please consider citing
 |  Folder    | description |
 | ---|---|
 
-Feedbacks and comments are welcome! Feel free to contact us via [chaoma99@gmail.com](mailto:chaoma99@gmail.com) or [carrierlxk@gmail.com](mailto:carrierlxk@gmail.com).
+Feedbacks and comments are welcome! Feel free to contact us via [carrierlxk@gmail.com](mailto:carrierlxk@gmail.com) or [chaoma99@gmail.com](mailto:chaoma99@gmail.com).
 
 Enjoy!
