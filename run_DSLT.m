@@ -9,9 +9,9 @@ function [precision, fps] = run_DSLT(video, show_visualization, show_plots)
     addpath(genpath('toolbox'));
     
     %res_path = 'results3/';
-    if ~exist(res_path)
-        mkdir(res_path);
-    end
+%     if ~exist(res_path)
+%         mkdir(res_path);
+%     end
     
     addpath('util');
    
