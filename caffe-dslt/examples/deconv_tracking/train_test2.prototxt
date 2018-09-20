@@ -1,0 +1,29 @@
+# design for triplet stream network
+name: "TwoflowSTN"
+force_backward: true
+input: "examplar"
+input_dim: 1
+input_dim: 3
+input_dim: 11
+input_dim: 11
+
+input: "instance"
+input_dim: 1
+input_dim: 3
+input_dim: 23
+input_dim: 23
+
+layer {
+  name: "corr"
+  type: "Correlation"
+  bottom: "instance"
+  bottom: "examplar"
+  top: "corr"
+  correlation_param {
+    pad: 0
+    kernel_size: 1
+    max_displacement:5 #63
+    stride_1: 1
+    stride_2: 1
+  }
+}

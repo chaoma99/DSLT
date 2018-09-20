@@ -1,0 +1,18 @@
+name: "adjust_layer"
+force_backward: true
+input: "data"
+input_dim: 1
+input_dim: 100
+input_dim: 29#15
+input_dim: 29#15
+layer {
+  name: "adjust"   type: "Convolution" bottom: "data"  top: "adjust_data"  param {
+  lr_mult: 0  decay_mult: 0   }  param {  lr_mult: 1   decay_mult: 0  }
+  convolution_param {    num_output: 100    kernel_size: 1  group: 100  
+    weight_filler { type: "constant"      value: 1    }
+    bias_filler {
+      type: "constant"
+      value: 0
+    }
+ }
+}

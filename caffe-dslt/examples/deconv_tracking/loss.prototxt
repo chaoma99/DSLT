@@ -1,0 +1,14 @@
+# design for scale+loss
+name: "CorrelatioMapLoss"
+force_backward: true
+input: "examplar"
+input_dim: 50
+input_dim: 96
+input_dim: 127
+input_dim: 127
+
+input: "instance"
+input_dim: 50
+input_dim: 96
+input_dim: 239
+input_dim: 239

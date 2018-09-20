@@ -1,0 +1,29 @@
+name: "de-conv3"
+force_backward: true
+input: "data"
+input_dim: 1
+input_dim: 1
+#input_dim: 232
+#input_dim: 232
+input_dim: 57 #48
+input_dim: 57 #48
+#input_dim: 480
+#input_dim: 480
+layer {
+  bottom: "data"
+  type: "Convolution"
+  top: "score_fr"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  param {
+    lr_mult: 2
+    decay_mult: 0
+  }
+  convolution_param {
+    num_output: 1
+    pad: 0
+    kernel_size: 1
+  }
+}

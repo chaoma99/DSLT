@@ -1,0 +1,14 @@
+net: "/home/luxiankai/code/deep-residual-networks/caffe/examples/ResNet/ResNet.prototxt"
+#test_iter: 100
+#test_interval: 2000
+display: 1
+base_lr: 0.00005#0.001<-#0.0001
+lr_policy: "step"
+stepsize: 10000 #10000
+gamma: 0.8
+max_iter: 50000
+momentum: 0.9
+weight_decay: 0.0005#0.001
+snapshot: 1000
+snapshot_prefix: "examples/ResNet/pretrain_resnet/"
+solver_mode: GPU

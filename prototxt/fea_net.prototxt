@@ -1,0 +1,33 @@
+# refer to flownet 
+name: "TwoflowVGGDeconv"
+force_backward: true
+input: "data"
+input_dim: 1
+input_dim: 3
+input_dim: 305 #420#  #5*height
+input_dim: 234 #648#  #9*width
+
+layer {   bottom: "data"  top: "conv1_1"  name: "conv1_1"  type: "Convolution"
+  param {  name: "conv1_1_w"  lr_mult: 0  }   param: {  name: "conv1_1_b"  lr_mult: 0  }  convolution_param {    num_output: 64    pad: 1    kernel_size: 3  }}
+layer {  bottom: "conv1_1"  top: "conv1_1"  name: "relu1_1"  type: "ReLU"}
+layer {  bottom: "conv1_1"  top: "conv1_2"  name: "conv1_2"  type: "Convolution"  param {  name: "conv1_2_w"  lr_mult: 0  }  param: {  name: "conv1_2_b"  lr_mult: 0  }  convolution_param {    num_output: 64    pad: 1    kernel_size: 3  }}
+layer {  bottom: "conv1_2"  top: "conv1_2"  name: "relu1_2"  type: "ReLU"}
+layer {  bottom: "conv1_2"  top: "pool1"  name: "pool1"  type: "Pooling"  pooling_param { pool: MAX    kernel_size: 2    stride: 2  }}
+layer {  bottom: "pool1"  top: "conv2_1"  name: "conv2_1"  type: "Convolution"  param {  name: "conv2_1_w"  lr_mult: 0  }  param: {  name: "conv2_1_b"  lr_mult: 0  }  convolution_param {    num_output: 128    pad: 1    kernel_size: 3  }}
+layer {  bottom: "conv2_1"  top: "conv2_1" name: "relu2_1"  type: "ReLU"}
+layer {  bottom: "conv2_1"  top: "conv2_2"  name: "conv2_2"  type: "Convolution"   param {  name: "conv2_2_w"  lr_mult: 0  }  param: { name: "conv2_2_b"  lr_mult: 0  }  convolution_param { num_output: 128    pad: 1    kernel_size: 3  }}
+layer {  bottom: "conv2_2"  top: "conv2_2"  name: "relu2_2"  type: "ReLU"}
+layer {  bottom: "conv2_2"  top: "pool2"  name: "pool2"  type: "Pooling"  pooling_param {    pool: MAX    kernel_size: 2    stride: 2  }}
+layer {  bottom: "pool2"  top: "conv3_1"  name: "conv3_1"  type: "Convolution"  param {  name: "conv3_1_w"  lr_mult: 0  }  param: {  name: "conv3_1_b"  lr_mult: 0  }  convolution_param {    num_output: 256    pad: 1    kernel_size: 3  }}
+layer {  bottom: "conv3_1"  top: "conv3_1"  name: "relu3_1" type: "ReLU"}
+layer {  bottom: "conv3_1"  top: "conv3_2"  name: "conv3_2"  type: "Convolution"   param {  name: "conv3_2_w"  lr_mult: 0  }  param: {  name: "conv3_2_b"  lr_mult: 0  }  convolution_param {    num_output: 256    pad: 1    kernel_size: 3  }}
+layer {  bottom: "conv3_2"  top: "conv3_2"  name: "relu3_2"  type: "ReLU"}
+layer {  bottom: "conv3_2"  top: "conv3_3"  name: "conv3_3"  type: "Convolution"  param {  name: "conv3_3_w"  lr_mult: 0  }  param: {  name: "conv3_3_b"  lr_mult: 0  }  convolution_param {    num_output: 256    pad: 1    kernel_size: 3  }}
+layer {  bottom: "conv3_3"  top: "conv3_3"  name: "relu3_3"  type: "ReLU"}
+layer {  bottom: "conv3_3"  top: "conv4_1"  name: "conv4_1"  type: "Convolution"  param {  name: "conv4_1_w"  lr_mult: 0  }  param: {  name: "conv4_1_b"  lr_mult: 0  }  convolution_param {    num_output: 512   pad: 1    kernel_size: 3  }}
+layer {  bottom: "conv4_1"  top: "conv4_1"  name: "relu4_1"  type: "ReLU"}
+layer {  bottom: "conv4_1"  top: "conv4_2"  name: "conv4_2"  type: "Convolution"  param {  name: "conv4_2_w"  lr_mult: 0  }  param: {  name: "conv4_2_b"  lr_mult: 0  }  convolution_param {    num_output: 512    pad: 1    kernel_size: 3  }}
+layer {  bottom: "conv4_2"  top: "conv4_2"  name: "relu4_2"  type: "ReLU"}
+layer {  bottom: "conv4_2"  top: "conv4_3"  name: "conv4_3"  type: "Convolution"  param {  name: "conv4_3_w"  lr_mult: 0  }   param: {  name: "conv4_3_b"  lr_mult: 0  }  convolution_param {    num_output: 512    pad: 1    kernel_size: 3  }} #top: "conv4_3_c"
+layer {  bottom: "conv4_3"  top: "conv4_3"  name: "relu4_3"  type: "ReLU"}
+
