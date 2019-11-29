@@ -5,7 +5,7 @@
 
 :new:
 
-The pytorch version of DSLT is released. We take the Siamese Tracker as the examplar and obtain a significant performance promotion.
+The pytorch version of DSLT is released :arrow_lower_right: https://github.com/carrierlxk/DSLT. We take the Siamese Tracker as the examplar and obtain a significant performance promotion.
 
 
 This is the research code for the ECCV 2018 paper: 
