@@ -3,6 +3,11 @@
 
 ### Introduction
 
+:new:
+
+The pytorch version of DSLT is released. We take the Siamese Tracker as the examplar and obtain a significant performance promotion.
+
+
 This is the research code for the ECCV 2018 paper: 
 
 [Xiankai Lu](https://github.com/carrierlxk),  [Chao Ma](https://www.chaoma.info), [Bingbing Ni](https://scholar.google.com/citations?user=eUbmKwYAAAAJ&hl=en), [Xiaokang Yang](http://english.seiee.sjtu.edu.cn/english/detail/842_802.htm), [Ian Reid](https://cs.adelaide.edu.au/~ianr/), and [Ming-Hsuan Yang](http://faculty.ucmerced.edu/mhyang/), Deep Regression Tracking with Shrinkage Loss ([paper link](http://faculty.ucmerced.edu/mhyang/papers/eccv2018_rtsl.pdf)), ECCV 2018. 
